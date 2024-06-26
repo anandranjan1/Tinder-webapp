@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .detailscontainer {
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
+        }
+        .element-container {
+            overflow: hidden;
+        }
+        .tag {
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body class="relative h-screen w-full bg-black">
+    <div class="imagecontainer w-full h-full relative overflow-hidden">
+        <div class="maincard z-[3] w-[130%] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 h-[130%]">
+            <img class="w-full h-full object-cover" src="" alt="">
+        </div>
+        <div class="incomingcard z-[2] w-[130%] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 h-[130%]">
+            <img class="w-full h-full object-cover" src="" alt="">
+        </div>
+    </div>
+
+    <div class="absolute top-0 left-0 z-[4] w-full h-full flex flex-col justify-between">
+        <div class="navbar px-5 py-6 flex justify-between items-center text-white">
+            <div class="prflimg w-[3rem] h-[3rem] rounded-full overflow-hidden">
+                <img class="w-full h-full object-cover" src="" alt="">
+            </div>
+            <h3 class="text-xl font-medium tracking-tighter">They liked you.</h3>
+            <div class="chaticon relative flex items-center justify-center rounded-full w-[3rem] h-[3rem] bg-white/20">
+                <i class="opacity-80 ri-chat-3-fill"></i>
+                <div class="badge flex items-center justify-center rounded-full absolute top-0 right-0 -translate-y-[5px] translate-x-[3px] w-5 h-5 bg-red-500">
+                    <h5 class="text-[13px] font-[300]">5</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="detailscontainer w-full px-5 pb-10">
+            <div class="details w-full space-y-4">
+                <div class="element-container">
+                    <div class="element location flex items-center gap-4">
+                        <i class="w-[1.6rem] h-[1.6rem] flex items-center justify-center font-medium rounded-full bg-white ri-corner-left-up-fill"></i>
+                        <h3 class="text-white">USA, California</h3>
+                    </div>
+                </div>
+                <div class="element-container">
+                    <div class="element name flex gap-5 text-white mt-1">
+                        <h1 class="font-regular tracking-tighter text-6xl">Victoria</h1>
+                        <h1 class="font-regular tracking-tighter text-6xl opacity-60">20</h1>
+                    </div>
+                </div>
+                <div class="element-container">
+                    <div class="element tags flex flex-wrap gap-3 text-white mt-4"></div>
+                </div>
+                <div class="element-container">
+                    <div class="element bio text-white/80 mt-5">
+                        <h3 class="text-xl mt-2">Bio</h3>
+                        <p class="text-lg mt-3"></p>
+                    </div>
+                </div>
+                <div class="element-container">
+                    <div class="element flex items-start mt-10 gap-1">
+                        <button class="deny py-3 rounded-xl w-1/2 bg-white">
+                            <i class="text-3xl font-semibold ri-close-fill"></i>
+                        </button>
+                        <button class="accept py-3 rounded-xl w-1/2 bg-red-500">
+                            <i class="text-3xl font-semibold text-white ri-heart-2-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
